@@ -1,0 +1,14 @@
+PODS:
+  - LGBImage (0.1.0)
+
+DEPENDENCIES:
+  - LGBImage (from `../`)
+
+EXTERNAL SOURCES:
+  LGBImage:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LGBImage: 38ffbe803ff6c6e0870c48a3f9e0f9cf14fb2188
+
+COCOAPODS: 0.39.0

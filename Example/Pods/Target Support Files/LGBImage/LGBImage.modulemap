@@ -1,0 +1,6 @@
+framework module LGBImage {
+  umbrella header "LGBImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

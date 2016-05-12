@@ -4,8 +4,8 @@ target 'LGBImage_Example' do
   pod 'LGBImage', :path => '../'
 
   target 'LGBImage_Tests' do
-    inherit! :search_paths
 
+  pod 'LGBImage', :path => '../'
     
   end
 end
