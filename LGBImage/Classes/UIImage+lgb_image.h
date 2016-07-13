@@ -12,10 +12,20 @@
 
 -(UIImage *)lgb_imageWithCornerRadius:(CGFloat)radius;
 
+-(UIImage *)lgb_scaleToSize:(CGSize)size;
+
+
 +(UIImage *)lgb_imageWithColor:(UIColor *)color;
 
 +(UIImage *)lgb_imageWithColor:(UIColor *)color
+                          size:(CGSize)size;
+
++(UIImage *)lgb_imageWithColor:(UIColor *)color
                   cornerRadius:(CGFloat)cornerRadius;
+
++(UIImage *)lgb_imageWithColor:(UIColor *)color
+                  cornerRadius:(CGFloat)cornerRadius
+                          size:(CGSize)size;
 
 +(UIImage *)lgb_circleImageWithColor:(UIColor *)color
                                 size:(CGSize)size;

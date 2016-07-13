@@ -22,6 +22,16 @@
     return img;
 }
 
+-(UIImage *)lgb_scaleToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
 static CGFloat edgeFromRadius(CGFloat radius)
 {
     return radius * 2 + 1;
@@ -33,10 +43,24 @@ static CGFloat edgeFromRadius(CGFloat radius)
 }
 
 +(UIImage *)lgb_imageWithColor:(UIColor *)color
+                          size:(CGSize)size
+{
+    return [self lgb_imageWithColor:color cornerRadius:0 size:size];
+}
+
++(UIImage *)lgb_imageWithColor:(UIColor *)color
                   cornerRadius:(CGFloat)cornerRadius
 {
     CGFloat minEdge = edgeFromRadius(cornerRadius);
-    CGRect rect = CGRectMake(0, 0, minEdge, minEdge);
+    
+    return [self lgb_imageWithColor:color cornerRadius:cornerRadius size:CGSizeMake(minEdge, minEdge)];
+}
+
++(UIImage *)lgb_imageWithColor:(UIColor *)color
+                  cornerRadius:(CGFloat)cornerRadius
+                          size:(CGSize)size
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
     
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
