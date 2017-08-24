@@ -9,8 +9,9 @@
 #import "LGBViewController.h"
 #import "UIImage+lgb_image.h"
 
-@interface LGBViewController ()
-
+@interface LGBViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *data;
 @end
 
 @implementation LGBViewController
@@ -19,35 +20,84 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIScrollView *scroll = [UIScrollView new];
-    scroll.frame = self.view.bounds;
-    [self.view addSubview:scroll];
-    
-    UIImageView *v1 = [[UIImageView alloc] initWithFrame:CGRectMake(100, 10, 100, 100)];
-    v1.image = [UIImage lgb_imageWithColor:[UIColor redColor]];
-    [scroll addSubview:v1];
-    
-    
-    UIImageView *v2 = [[UIImageView alloc] initWithFrame:CGRectMake(100, CGRectGetMaxY(v1.frame) + 10, 100, 100)];
-    v2.image = [UIImage lgb_imageWithColor:[UIColor redColor] cornerRadius:20];
-    [scroll addSubview:v2];
-    
-    UIImageView *v3 = [[UIImageView alloc] initWithFrame:CGRectMake(100, CGRectGetMaxY(v2.frame) + 10, 100, 100)];
-    v3.image = [[UIImage imageNamed:@"xiaoxi.jpg"] lgb_imageWithCornerRadius:100];
-    [scroll addSubview:v3];
-    
-    UIImageView *v4 = [[UIImageView alloc] initWithFrame:CGRectMake(100, CGRectGetMaxY(v3.frame) + 10, 100, 100)];
-    v4.image = [UIImage lgb_circleImageWithColor:[UIColor redColor] size:CGSizeMake(100, 100)];
-    [scroll addSubview:v4];
-    
-    
-    scroll.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetMaxY(v4.frame));
+ 
+    [self setupViews];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - UITableViewDelegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return self.data.count;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    }
+    
+    cell.textLabel.text = self.data[indexPath.row][0];
+    cell.detailTextLabel.text = self.data[indexPath.row][1];
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Class class = NSClassFromString(self.data[indexPath.row][0]);
+    
+    [self.navigationController pushViewController:[class new] animated:YES];
+}
+
+-(void)setupViews
+{
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.tableView];
+    
+    self.tableView.frame = self.view.bounds;
+    
+    [self setupData];
+}
+
+-(void)setupData
+{
+    self.data = @[
+                  @[@"Example1", @"旋转图片"],
+                  @[@"Example2", @"设置图片圆角"],
+                  @[@"Example3", @"模糊图片"],
+                  @[@"Example4", @"corner image, 放大图片，圆角大小不变"],
+                  @[@"Example5", @"circle image, 图片大小一定，放大变模糊"],
+                  ];
+    
+    [self.tableView reloadData];
+}
+
+-(UITableView *)tableView
+{
+    if (_tableView == nil) {
+        _tableView = [UITableView new];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
 }
 
 @end

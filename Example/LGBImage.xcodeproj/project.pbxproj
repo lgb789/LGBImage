@@ -23,6 +23,11 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B89CE57B1F4E81FA00AE8589 /* Example1.m in Sources */ = {isa = PBXBuildFile; fileRef = B89CE57A1F4E81FA00AE8589 /* Example1.m */; };
+		B89CE57E1F4E820400AE8589 /* Example2.m in Sources */ = {isa = PBXBuildFile; fileRef = B89CE57D1F4E820400AE8589 /* Example2.m */; };
+		B89CE5821F4E9DB400AE8589 /* Example3.m in Sources */ = {isa = PBXBuildFile; fileRef = B89CE5811F4E9DB400AE8589 /* Example3.m */; };
+		B89CE5851F4EA01100AE8589 /* Example4.m in Sources */ = {isa = PBXBuildFile; fileRef = B89CE5841F4EA01100AE8589 /* Example4.m */; };
+		B89CE5881F4EA14400AE8589 /* Example5.m in Sources */ = {isa = PBXBuildFile; fileRef = B89CE5871F4EA14400AE8589 /* Example5.m */; };
 		FB352D4B3B66D06165E061CD /* Pods_LGBImage_Example_LGBImage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305240EE29E42AC32173C839 /* Pods_LGBImage_Example_LGBImage_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +69,16 @@
 		A2388C5517011272D385A2DB /* Pods-LGBImage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGBImage_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LGBImage_Example/Pods-LGBImage_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B084D3759F6F9C0641637C66 /* Pods-LGBImage_Example-LGBImage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGBImage_Example-LGBImage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LGBImage_Example-LGBImage_Tests/Pods-LGBImage_Example-LGBImage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5E05BA4A01EA181880577A8 /* LGBImage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LGBImage.podspec; path = ../LGBImage.podspec; sourceTree = "<group>"; };
+		B89CE5791F4E81FA00AE8589 /* Example1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example1.h; sourceTree = "<group>"; };
+		B89CE57A1F4E81FA00AE8589 /* Example1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example1.m; sourceTree = "<group>"; };
+		B89CE57C1F4E820400AE8589 /* Example2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2.h; sourceTree = "<group>"; };
+		B89CE57D1F4E820400AE8589 /* Example2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example2.m; sourceTree = "<group>"; };
+		B89CE5801F4E9DB400AE8589 /* Example3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example3.h; sourceTree = "<group>"; };
+		B89CE5811F4E9DB400AE8589 /* Example3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example3.m; sourceTree = "<group>"; };
+		B89CE5831F4EA01100AE8589 /* Example4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example4.h; sourceTree = "<group>"; };
+		B89CE5841F4EA01100AE8589 /* Example4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example4.m; sourceTree = "<group>"; };
+		B89CE5861F4EA14400AE8589 /* Example5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example5.h; sourceTree = "<group>"; };
+		B89CE5871F4EA14400AE8589 /* Example5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example5.m; sourceTree = "<group>"; };
 		DA3809FF28DE1EA1D3630C33 /* Pods-LGBImage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGBImage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LGBImage_Example/Pods-LGBImage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E603E4638C0400D7A5922E87 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EF09B3CF0863F1D358D85339 /* Pods_LGBImage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LGBImage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +166,16 @@
 				6003F5A6195388D20070C39A /* LGBViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				B89CE5791F4E81FA00AE8589 /* Example1.h */,
+				B89CE57A1F4E81FA00AE8589 /* Example1.m */,
+				B89CE57C1F4E820400AE8589 /* Example2.h */,
+				B89CE57D1F4E820400AE8589 /* Example2.m */,
+				B89CE5801F4E9DB400AE8589 /* Example3.h */,
+				B89CE5811F4E9DB400AE8589 /* Example3.m */,
+				B89CE5831F4EA01100AE8589 /* Example4.h */,
+				B89CE5841F4EA01100AE8589 /* Example4.m */,
+				B89CE5861F4EA14400AE8589 /* Example5.h */,
+				B89CE5871F4EA14400AE8589 /* Example5.m */,
 			);
 			name = "Example for LGBImage";
 			path = LGBImage;
@@ -250,6 +275,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = lgb789;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 6888BNAKKV;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -395,7 +423,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LGBAppDelegate.m in Sources */,
+				B89CE57E1F4E820400AE8589 /* Example2.m in Sources */,
+				B89CE5821F4E9DB400AE8589 /* Example3.m in Sources */,
 				6003F5A7195388D20070C39A /* LGBViewController.m in Sources */,
+				B89CE57B1F4E81FA00AE8589 /* Example1.m in Sources */,
+				B89CE5851F4EA01100AE8589 /* Example4.m in Sources */,
+				B89CE5881F4EA14400AE8589 /* Example5.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6888BNAKKV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LGBImage/LGBImage-Prefix.pch";
 				INFOPLIST_FILE = "LGBImage/LGBImage-Info.plist";
@@ -535,6 +569,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6888BNAKKV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LGBImage/LGBImage-Prefix.pch";
 				INFOPLIST_FILE = "LGBImage/LGBImage-Info.plist";
