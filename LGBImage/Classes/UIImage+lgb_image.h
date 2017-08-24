@@ -63,6 +63,13 @@
  */
 +(UIImage *)lgb_imageFromLayer:(CALayer *)layer;
 
+//resize image
++(UIImage *)lgb_scaleImage:(UIImage *)image toSize:(CGSize)newSize inRect:(CGRect)rect;
+
++(UIImage *)lgb_scaleImage:(UIImage *)image fitToSize:(CGSize)newSize;
+
++(UIImage *)lgb_scaleImage:(UIImage *)image fillToSize:(CGSize)newSize;
+
 #pragma mark - *********************** 对象方法 ***********************
 
 /**
