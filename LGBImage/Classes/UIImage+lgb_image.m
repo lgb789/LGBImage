@@ -95,11 +95,7 @@
 +(UIImage *)lgb_imageFromView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, [[UIScreen mainScreen] scale]);
-    if ([view respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
-        [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
-    }else{
-        [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    }
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
